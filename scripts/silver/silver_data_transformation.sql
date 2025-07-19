@@ -1,3 +1,4 @@
+-- Transformation to keep only the unique primary keys
 INSERT INTO silver.crm_cust_info (
 	cst_id,
 	cst_key,
@@ -26,4 +27,5 @@ FROM(
 		*,
 		ROW_NUMBER() OVER (PARTITION BY cst_id ORDER BY cst_create_date DESC) flag_last
 	FROM bronze.crm_cust_info
+	WHERE cst_id IS NOT NULL
 )t WHERE flag_last = 1;
