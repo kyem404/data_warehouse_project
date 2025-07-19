@@ -39,10 +39,11 @@ FROM bronze.crm_cust_info;
 SELECT DISTINCT cst_marital_status
 FROM bronze.crm_cust_info;
 
+
+
 ----------------------------------------------------------------------------
 -- Quality Checks for the SILVER table after being inserted transformed data
 ----------------------------------------------------------------------------
-
 
 -- Check for Nulls or Duplicates in the Primary Key
 -- Expectation: No Result
