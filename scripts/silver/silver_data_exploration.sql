@@ -20,3 +20,17 @@ where cst_firstname != trim(cst_firstname);
 select cst_lastname
 from bronze.crm_cust_info
 where cst_lastname != trim(cst_lastname);
+
+-- Check for unwanted spaces in Gender
+-- Expectation: No Results
+select cst_gndr
+from bronze.crm_cust_info
+where cst_gndr != trim(cst_gndr);
+
+-- Check for Data Standardization & Consistency in cst_gndr
+SELECT DISTINCT cst_gndr
+FROM bronze.crm_cust_info;
+
+-- Check for Data Standardization & Consistency in cst_marital_status
+SELECT DISTINCT cst_marital_status
+FROM bronze.crm_cust_info;
