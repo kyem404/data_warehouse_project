@@ -1,4 +1,4 @@
--- Creating view for products dimesion table
+-- Created view for products dimesion table
 
 CREATE VIEW gold.dim_products AS
 SELECT
