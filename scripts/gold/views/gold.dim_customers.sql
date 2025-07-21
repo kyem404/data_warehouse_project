@@ -1,4 +1,4 @@
--- Created view for the dimension customers
+-- Created view for the customers dimension table
 CREATE VIEW gold.dim_customers AS 
 SELECT
 	ROW_NUMBER() OVER (ORDER BY cst_id) AS customer_key,
